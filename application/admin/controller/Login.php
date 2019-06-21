@@ -1,5 +1,8 @@
 <?php
 namespace app\admin\controller;
+use app\index\model\User;
+use think\captcha\Captcha;
+use think\facade\Session;
 use Db;
 use think\Controller;
 
@@ -28,14 +31,10 @@ class Login extends Controller
             } else {
                 $id = $arr['id'];
                 $name = $arr['Name'];
-                session('id', $id);
-                session('Name', $name);
+                Session::set('id',$id);
+                Session::set('name',$name);
                 echo "ok";
             }
         }
-    }
-    public function hello($name = 'ThinkPHP5')
-    {
-        return 'hello,' . $name;
     }
 }

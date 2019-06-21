@@ -1,15 +1,17 @@
 <?php
 namespace app\admin\controller;
 use Db;
-class Admin
+use think\facade\Session;
+class Admin extends Common
 {
     public function index()
     {
         return $this->fetch('index/index');
     }
-
-    public function hello($name = 'ThinkPHP5')
+    public function loginOut()
     {
-        return 'hello,' . $name;
+        Session::delete('name');
+        // $this->success('login');
+        return $this->fetch('login/login');
     }
 }

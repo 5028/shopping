@@ -1,0 +1,42 @@
+---------------------------------------------------------------
+[2019-06-19T16:12:57+08:00] ::1 GET localhost/shopping/public/index.php/index/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013413s ] mysql:host=127.0.0.1;dbname=play;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `admin` [ RunTime:0.010764s ]
+[ sql ] [ SQL ] SELECT * FROM `admin` LIMIT 1 [ RunTime:0.000496s ]
+---------------------------------------------------------------
+[2019-06-19T16:14:31+08:00] ::1 GET localhost/shopping/public/index.php/index/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010922s ] mysql:host=127.0.0.1;dbname=play;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.009782s ]
+[ sql ] [ SQL ] SELECT * FROM `user` LIMIT 1 [ RunTime:0.000456s ]
+---------------------------------------------------------------
+[2019-06-19T16:14:57+08:00] ::1 GET localhost/shopping/public/index.php/index/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001065s ] mysql:host=127.0.0.1;dbname=play;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.011091s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000413s ]
+---------------------------------------------------------------
+[2019-06-19T16:19:12+08:00] ::1 GET localhost/shopping/public/index.php/index/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011676s ] mysql:host=127.0.0.1;dbname=play;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.010056s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000549s ]
+---------------------------------------------------------------
+[2019-06-19T16:43:42+08:00] ::1 GET localhost/shopping/public/
+[运行时间：0.151798s] [吞吐率：6.59req/s] [内存消耗：2,013.46kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\shopping\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate, br',
+  'referer' => 'http://localhost/shopping/',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.108 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'localhost',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012670s ] mysql:host=127.0.0.1;dbname=play;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `user` [ RunTime:0.024246s ]
+[ sql ] [ SQL ] SELECT * FROM `user` [ RunTime:0.000542s ]
