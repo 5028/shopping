@@ -8,5 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'think\\composer\\' => array($vendorDir . '/topthink/think-installer/src'),
     'think\\captcha\\' => array($vendorDir . '/topthink/think-captcha/src'),
+    'gmars\\rbac\\' => array($vendorDir . '/gmars/tp5-rbac/src'),
     'app\\' => array($baseDir . '/application'),
 );

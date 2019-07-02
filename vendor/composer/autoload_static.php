@@ -16,6 +16,10 @@ class ComposerStaticInitca2302649379ce32b9122a25b6b8c376
             'think\\composer\\' => 15,
             'think\\captcha\\' => 14,
         ),
+        'g' => 
+        array (
+            'gmars\\rbac\\' => 11,
+        ),
         'a' => 
         array (
             'app\\' => 4,
@@ -30,6 +34,10 @@ class ComposerStaticInitca2302649379ce32b9122a25b6b8c376
         'think\\captcha\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/think-captcha/src',
+        ),
+        'gmars\\rbac\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gmars/tp5-rbac/src',
         ),
         'app\\' => 
         array (

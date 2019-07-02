@@ -1,4 +1,4 @@
-<?php /*a:1:{s:76:"D:\phpStudy\PHPTutorial\WWW\shopping\application\admin\view\login\login.html";i:1561114478;}*/ ?>
+<?php /*a:1:{s:76:"D:\phpStudy\PHPTutorial\WWW\shopping\application\admin\view\login\login.html";i:1561433012;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <style type="text/css">
@@ -26,7 +26,6 @@
         <link rel="apple-touch-icon-precomposed" href="/shopping/public/static//assets/ico/apple-touch-icon-57-precomposed.png">
         <script src="/shopping/public/static//JS/jquery.min.2.1.js"></script>
     </head>
-
     <body>
             <div class="inner-bg">
                 <div class="container">	
@@ -71,7 +70,6 @@
                 </div>
             </div> 
         </div>
-
 <script>	
     $('#log').click(function() {
         var name=$('#form-first-name').val()
@@ -86,7 +84,7 @@
             },
             success:function(result) {
                 if (result=="ok") {
-                   	alert('chenggong');
+                   	alert('登陆成功');
                    	location.href="<?php echo url('Admin/index'); ?>";
             	}else if (result=="error") {
                     alert('验证码错误');
