@@ -25,7 +25,6 @@
         <link rel="apple-touch-icon-precomposed" href="__STATIC__/assets/ico/apple-touch-icon-57-precomposed.png">
         <script src="__STATIC__/JS/jquery.min.2.1.js"></script>
     </head>
-
     <body>
             <div class="inner-bg">
                 <div class="container">	
@@ -70,7 +69,6 @@
                 </div>
             </div> 
         </div>
-
 <script>	
     $('#log').click(function() {
         var name=$('#form-first-name').val()
@@ -85,7 +83,7 @@
             },
             success:function(result) {
                 if (result=="ok") {
-                   	alert('chenggong');
+                   	alert('登陆成功');
                    	location.href="{:url('Admin/index')}";
             	}else if (result=="error") {
                     alert('验证码错误');

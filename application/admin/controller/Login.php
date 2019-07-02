@@ -14,14 +14,14 @@ class Login extends Controller
     }
     public function login()
     {
-        return $this->fetch('login/login');
+        return $this->fetch();
     }
     public function check_login()
     {
         $name = input('get.name');
         $pwd = input('get.password');
         $code = input('get.code');
-        $arr = Db::table('user')->where('Name', $name)->where('Password', $pwd)->find();
+        $arr = Db::table('admin')->where('name', $name)->where('password', $pwd)->find();
         if (empty($arr)) {
             die;
         } else {
@@ -30,7 +30,7 @@ class Login extends Controller
                 echo "error";
             } else {
                 $id = $arr['id'];
-                $name = $arr['Name'];
+                $name = $arr['name'];
                 Session::set('id',$id);
                 Session::set('name',$name);
                 echo "ok";
