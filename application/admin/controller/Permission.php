@@ -12,20 +12,18 @@ class Permission extends Common
     {
         return $this->fetch();
     }
-    public function permissionCate()
-    {
-        return $this->fetch();
-    }    
+ 
     public function permission_add()
     {
         return $this->fetch();
     }
+
     public function add(){
     
         $data=Request::post();
         $validate= new \app\admin\validate\Permission;
         if (!$validate->check($data)) {
-            $arr=['code'=>'1','status'=>'error','data'=>$validate->getError()];
+            $arr=['code'=>'0','status'=>'error','data'=>$validate->getError()];
             echo json_encode($arr);
             die;
         }
@@ -40,17 +38,18 @@ class Permission extends Common
             $arr=['code'=>'1','status'=>'ok','data'=>'添加成功'];
             echo json_encode($arr);
         }else{
-            $arr=['code'=>'1','status'=>'error','data'=>'分类已经存在'];
+            $arr=['code'=>'0','status'=>'error','data'=>'分类已经存在'];
             echo json_encode($arr);
             die;
         }
     }
+
     public function show()
     {
         $Permission_category = new Permission_category;
         $obj=$Permission_category->select();
         $arr=json_decode($obj,true);
-        $res=['code'=>'0','status'=>'ok','data'=>$arr];
+        $res=['code'=>'1','status'=>'ok','data'=>$arr];
         echo $json=json_encode($res);
     }
     public function mydelete()
@@ -62,16 +61,34 @@ class Permission extends Common
             $arr=['code'=>'1','status'=>'ok','data'=>'删除成功'];
             echo json_encode($arr);
          }else{
-            $arr=['code'=>'1','status'=>'error','data'=>'删除失败'];
+            $arr=['code'=>'0','status'=>'error','data'=>'删除失败'];
             echo json_encode($arr);
             die;     
         }
     }
     public function myupdate()
     {
-        
+        $id=Request::post('id');
+        $ass=Db::table('Permission_category')->where('id',$id)->select();
+        $arr=['code'=>'1','status'=>'ok','data'=>$ass];
+        echo json_encode($arr);
     }
+    public function myupdate1(){
+        $id=Request::post('id');
+        $name=Request::post('name');
+        $description=Request::post('description');
 
-
+        $ass=Db::table('Permission_category')->where('name',$name)->select();
+        
+        if (empty($ass)) {
+            $ass1=Db::table('Permission_category')->where('id',$id)->update(['name' => $name],['description' => $description]);
+            $arr=['code'=>'1','status'=>'ok','data'=>'修改成功'];
+            echo json_encode($arr);
+        }else{
+            $arr=['code'=>'0','status'=>'error','data'=>'修改失败'];
+            echo json_encode($arr);
+            die;
+        }    
+    }
 
 }
